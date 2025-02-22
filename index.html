@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Previous head section remains the same until the store button images -->
+  <head>
+    <!-- Previous head content remains exactly the same -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Io Conto</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Io Conto" />
+    <meta
+      property="og:description"
+      content="Scarica Io Conto - Disponibile per iOS e Android"
+    />
+    <meta
+      property="og:image"
+      content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIHJ4PSI4MCIgZmlsbD0iIzQ0NDdFNiIvPjxwYXRoIGQ9Ik0xNTAgMjAwQzE1MCAxNzIuMzg2IDE3Mi4zODYgMTUwIDIwMCAxNTBDMjI3LjYxNCAxNTAgMjUwIDE3Mi4zODYgMjUwIDIwMEMyNTAgMjI3LjYxNCAyMjcuNjE0IDI1MCAyMDAgMjUwQzE3Mi4zODYgMjUwIDE1MCAyMjcuNjE0IDE1MCAyMDAiIGZpbGw9IndoaXRlIi8+PC9zdmc+"
+    />
+    <meta property="og:url" content="https://ic.eu.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Io Conto" />
+    <meta
+      name="twitter:description"
+      content="Download Io Conto app - Available for iOS and Android"
+    />
+    <meta
+      name="twitter:image"
+      content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIHJ4PSI4MCIgZmlsbD0iIzQ0NDdFNiIvPjxwYXRoIGQ9Ik0xNTAgMjAwQzE1MCAxNzIuMzg2IDE3Mi4zODYgMTUwIDIwMCAxNTBDMjI3LjYxNCAxNTAgMjUwIDE3Mi4zODYgMjUwIDIwMEMyNTAgMjI3LjYxNCAyMjcuNjE0IDI1MCAyMDAgMjUwQzE3Mi4zODYgMjUwIDE1MCAyMjcuNjE0IDE1MCAyMDAiIGZpbGw9IndoaXRlIi8+PC9zdmc+"
+    />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=YOUR-GA-ID"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "YOUR-GA-ID");
+    </script>
+
+    <!-- Manrope Font -->
+    <link href="https://fonts.cdnfonts.com/css/manrope" rel="stylesheet" />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #4447e6;
+        font-family: "Manrope", sans-serif;
+        color: white;
+      }
+
+      .bounding-box {
+        position: relative;
+        padding: 40px;
+        margin: 20px;
+        max-width: 90%;
+        width: auto;
+        box-sizing: border-box;
+        /* Il background e il bordo verranno gestiti dallo pseudo-elemento */
+      }
+
+      .bounding-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 35% 65% 67% 33% / 32% 35% 65% 68%;
+        z-index: -1;
+        transform-origin: center;
+        animation: breath 4s ease-in-out infinite;
+      }
+
+      @keyframes breath {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.075);
+        }
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      .app-icon {
+        width: 128px;
+        height: 128px;
+        margin-bottom: 20px;
+      }
+
+      .app-name {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin: 0 0 20px 0;
+      }
+
+      .store-buttons {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .store-button {
+        height: 48px;
+        transition: transform 0.2s ease;
+      }
+
+      .store-button:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 480px) {
+        .bounding-box {
+          padding: 30px;
+        }
+
+        .app-icon {
+          width: 128px;
+          height: 128px;
+        }
+
+        .app-name {
+          font-size: 2rem;
+        }
+
+        .store-button {
+          height: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bounding-box">
+      <div class="container">
+        <img src="icon.svg" alt="Io Conto" class="app-icon" />
+        <h1 class="app-name">Io Conto.</h1>
+        <div class="store-buttons">
+          <a href="https://apps.apple.com/app/YOUR-APP-ID" target="_blank">
+            <img
+              src="app-store.svg"
+              alt="Download on App Store"
+              class="store-button"
+            />
+          </a>
+          <a
+            href="https://play.google.com/store/apps/details?id=YOUR-APP-ID"
+            target="_blank"
+          >
+            <img
+              src="google-play.svg"
+              alt="Get it on Google Play"
+              class="store-button"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
